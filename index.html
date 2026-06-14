@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <button id="prevMonth">◀</button>
+
+        <h1 id="monthTitle"></h1>
+
+        <button id="nextMonth">▶</button>
+    </header>
+
+    <div class="weekdays">
+        <div>Pn</div>
+        <div>Wt</div>
+        <div>Śr</div>
+        <div>Cz</div>
+        <div>Pt</div>
+        <div>Sb</div>
+        <div>Nd</div>
+    </div>
+
+    <div id="calendar" class="calendar"></div>
+
+</div>
+
+<div id="modal" class="modal">
+
+    <div class="modal-content">
+
+        <h2>Wydarzenie</h2>
+
+        <input type="time" id="eventTime">
+
+        <input
+            type="text"
+            id="eventTitle"
+            placeholder="Tytuł">
+
+        <textarea
+            id="eventDescription"
+            rows="4"
+            placeholder="Opis"></textarea>
+
+        <div class="buttons">
+
+            <button id="saveBtn">
+                Zapisz
+            </button>
+
+            <button id="deleteBtn">
+                Usuń
+            </button>
+
+            <button id="closeBtn">
+                Zamknij
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

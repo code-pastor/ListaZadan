@@ -1,0 +1,156 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f1f5f9;
+    padding:20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+header button{
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#monthTitle{
+    font-size:30px;
+}
+
+.weekdays{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    margin-bottom:10px;
+}
+
+.weekdays div{
+    text-align:center;
+    font-weight:bold;
+}
+
+.calendar{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:10px;
+}
+
+.day{
+    min-height:140px;
+    background:white;
+    border-radius:12px;
+    padding:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+.day-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.add-btn{
+    width:24px;
+    height:24px;
+    border:none;
+    border-radius:50%;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+}
+
+.event{
+    background:#dbeafe;
+    border-left:4px solid #2563eb;
+    margin-top:5px;
+    padding:5px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:12px;
+}
+
+.event-time{
+    font-weight:bold;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.4);
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    width:400px;
+    max-width:90%;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+}
+
+.modal-content input,
+.modal-content textarea{
+    width:100%;
+    margin-bottom:10px;
+    padding:10px;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+}
+
+.buttons button{
+    flex:1;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#saveBtn{
+    background:#22c55e;
+    color:white;
+}
+
+#deleteBtn{
+    background:#ef4444;
+    color:white;
+}
+
+#closeBtn{
+    background:#94a3b8;
+    color:white;
+}
+
+@media(max-width:768px){
+
+    .calendar{
+        gap:5px;
+    }
+
+    .day{
+        min-height:110px;
+    }
+
+}
